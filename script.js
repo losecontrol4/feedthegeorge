@@ -6,6 +6,7 @@ let canvasHeight = 1875
 let keys = ['bagel', 'pizza', 'banana', 'teq', 'uncrust']
 let chompArray = []
 let clicked = false
+let pointer = null
 
 var config = {
     
@@ -144,6 +145,8 @@ function create() {
             loop: true
         })
     music.play()
+    game.input.onDown.add(this.changeStateFunction, this)
+    
 }
 
 function update() {
@@ -152,6 +155,7 @@ function update() {
         
     if (!clicked && game.input.activePointer.isDown) {
         clicked = true
+        pointer = game.input.activePointer
     }
 
     georgeHead.body.x = george.body.x + george.width/2 - 130;
