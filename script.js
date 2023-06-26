@@ -1,4 +1,5 @@
 
+
 // import Phaser from 'phaser'
 let foodEaten = 0
 let canvasWidth = 3000
@@ -145,6 +146,10 @@ function create() {
             loop: true
         })
     music.play()
+
+    this.input.on('pointermove', (pointer) => {
+        console.log(pointer.x, pointer.y)
+        });
     
     
 }
