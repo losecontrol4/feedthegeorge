@@ -35,7 +35,6 @@ var config = {
 };
 
 var game = new Phaser.Game(config);
-let spatVel = 0
 
 function preload() {
   try {
@@ -144,7 +143,16 @@ function create() {
     let music = this.sound.add('feedthebirds', {
             loop: true
         })
+
+    this.input.on('pointerdown', function (pointer)
+        {
+
+            console.log(this.game.loop.frame, 'down B');
+
+        }, this);
     music.play()
+
+    
 
 
     
@@ -163,10 +171,9 @@ function update() {
     georgeHead.body.x = george.body.x + george.width/2 - 130;
     georgeHead.body.y = george.body.y - 100;
 
-  if(this.input.activePointer.isDown){
     spat.body.x = p.x - spat.displayWidth + 15
     spat.body.y = p.y - spat.displayHeight + 17
-}
+
 
     spatHead.body.x = spat.body.x + 1;
     spatHead.body.y = spat.body.y;
