@@ -119,8 +119,12 @@ function create() {
             
     music.play()
 
-    
 
+    this.input.on('pointerdown', function (pointer) {
+        console.log(pointer.worldX, pointer.worldY)
+       
+    }
+    
 
     
 }
