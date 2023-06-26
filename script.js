@@ -129,7 +129,7 @@ function update() {
     if (Phaser.Math.Between(0, 30) == 1)
         createFood(this, food)
         
-    if (!clicked && game.input.activePointer.isDown) {
+    if (!clicked && this.input.activePointer.isDown) {
         clicked = true
     }
 
@@ -187,7 +187,7 @@ function reflect(spatHead, object){
 
 var config = {
     
-    type: Phaser.AUTO,
+    type: Phaser.CANVAS,
     width: canvasWidth,
     height: canvasHeight,
     scale: {
@@ -211,7 +211,7 @@ var config = {
     },
   };
   
-  
+
   var game = new Phaser.Game(config);
 
 
