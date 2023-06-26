@@ -123,7 +123,7 @@ function create() {
     this.input.on('pointerdown', function (pointer) {
         console.log(pointer.worldX, pointer.worldY)
        
-    }
+    })
     
 
     
