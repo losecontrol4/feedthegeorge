@@ -146,10 +146,6 @@ function create() {
             loop: true
         })
     music.play()
-
-    this.input.on('pointermove', (pointer) => {
-        console.log(pointer.x, pointer.y)
-        });
     
     
 }
@@ -167,8 +163,8 @@ function update() {
     georgeHead.body.y = george.body.y - 100;
 
   if(clicked){
-    spat.body.x = this.input.activePointer.x - spat.displayWidth + 15
-    spat.body.y = this.input.activePointer.y - spat.displayHeight + 17
+    spat.body.x = game.input.activePointer.x - spat.displayWidth + 15
+    spat.body.y = game.input.activePointer.y - spat.displayHeight + 17
 }
 
     spatHead.body.x = spat.body.x + 1;
