@@ -133,6 +133,10 @@ function update() {
         clicked = true
     }
 
+    if (this.input.activePointer.isDown) {
+        alert("Yayyy")
+    }
+
    
 
     georgeHead.body.x = george.body.x + george.width/2 - 130;
