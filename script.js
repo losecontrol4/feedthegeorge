@@ -120,10 +120,10 @@ function create() {
     music.play()
 
 
-    this.input.on('pointerdown', function (pointer) {
-        console.log(pointer.worldX, pointer.worldY)
+    // this.input.on('pointerdown', function (pointer) {
+    //     console.log(pointer.worldX, pointer.worldY)
        
-    })
+    // })
     
 
     
@@ -144,9 +144,9 @@ function update() {
     georgeHead.body.x = george.body.x + george.width/2 - 130;
     georgeHead.body.y = george.body.y - 100;
 
-    // if (clicked){  
-    // spat.body.x = this.input.activePointer.x - spat.displayWidth + 15
-    // spat.body.y = this.input.activePointer.y - spat.displayHeight + 17}
+    if (clicked){  
+    spat.body.x = this.input.activePointer.x - spat.displayWidth + 15
+    spat.body.y = this.input.activePointer.y - spat.displayHeight + 17}
 
 
     spatHead.body.x = spat.body.x + 1;
