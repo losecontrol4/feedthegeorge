@@ -19,9 +19,6 @@ var config = {
     width: canvasWidth,
     height: canvasHeight,
   },
-  input :{
-    activePointers:2,
-  },
   physics: {
     default: "arcade",
     arcade: {
@@ -90,8 +87,8 @@ function create() {
 
 
   spat = this.physics.add.image(
-    800 / 2,
-    500 / 2,
+    canvasWidth / 2,
+    canvasHeight / 2,
     "spat"
   );
   spat.setScale(.5)
