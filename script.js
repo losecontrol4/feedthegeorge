@@ -145,7 +145,7 @@ function create() {
             loop: true
         })
     music.play()
-    game.input.onDown.add(this.changeStateFunction, this)
+    
     
 }
 
