@@ -188,7 +188,6 @@ function deleteFood(deleteZone, food) {
 }
 
 function eatFood(georgeHead, food) {
-    console.log(food)
     food.destroy()
     foodEaten += 1
     for(let i = 0; i < chompArray.length; i++){
