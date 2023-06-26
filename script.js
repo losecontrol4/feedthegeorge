@@ -87,8 +87,8 @@ function create() {
 
 
   spat = this.physics.add.image(
-    canvasWidth / 2,
-    canvasHeight / 2,
+    800 / 2,
+    500 / 2,
     "spat"
   );
   spat.setScale(.5)
