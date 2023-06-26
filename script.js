@@ -59,6 +59,7 @@ function preload() {
 
 function create() {
 
+  this.input.setPollAlways();
 
   background = this.add.image(
     canvasWidth / 2,
