@@ -211,7 +211,7 @@ var config = {
     },
   };
   
-
+  alert("Hi")
   var game = new Phaser.Game(config);
 
 
