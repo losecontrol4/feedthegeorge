@@ -147,10 +147,7 @@ function create() {
         })
     music.play()
 
-    this.input.on('pointermove', (pointer) => {
-        alert("hi")
-        });
-    
+
     
 }
 
