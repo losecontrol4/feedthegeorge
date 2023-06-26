@@ -137,7 +137,7 @@ function create() {
     george.anims.play("eat")
 
     for(let i = 0; i < 10; i++) {
-        chompArray.push(this.sound.add("chomp", { loop: false, volume: 0.3 }));
+        chompArray.push(this.sound.add("chomp", { loop: false, volume: 0.15 }));
     }
 
 
