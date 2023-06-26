@@ -155,8 +155,8 @@ function update() {
     georgeHead.body.y = george.body.y - 100;
 
   
-    spat.body.x = this.input.activePointer.worldX - spat.displayWidth + 15
-    spat.body.y = this.input.activePointer.worldY - spat.displayHeight + 17
+    spat.body.x = this.input.activePointer.x - spat.displayWidth + 15
+    spat.body.y = this.input.activePointer.y - spat.displayHeight + 17
     this.input.activePointer.velocity
 
     spatHead.body.x = spat.body.x + 1;
