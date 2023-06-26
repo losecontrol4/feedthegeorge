@@ -144,12 +144,11 @@ function create() {
             loop: true
         })
 
-    this.input.on('pointerdown', function (pointer)
-        {
-
-            console.log("hello");
-
-        }, this);
+        this.input.on('pointermove', (pointer) => {
+            console.log(pointer.x, pointer.y)
+            });
+            
+            
     music.play()
 
     
