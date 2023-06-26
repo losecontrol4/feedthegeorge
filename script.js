@@ -5,6 +5,7 @@ let canvasWidth = 3000
 let canvasHeight = 1875
 let keys = ['bagel', 'pizza', 'banana', 'teq', 'uncrust']
 let chompArray = []
+let clicked = false
 
 var config = {
     
@@ -151,14 +152,18 @@ function create() {
 function update() {
     if (Phaser.Math.Between(0, 30) == 1)
         createFood(this, food)
+        
+    if (!clicked && game.input.activePointer.isDown) {
+        clicked = true
+    }
 
     georgeHead.body.x = george.body.x + george.width/2 - 130;
     georgeHead.body.y = george.body.y - 100;
 
-  
+  if(clicked){
     spat.body.x = this.input.activePointer.x - spat.displayWidth + 15
     spat.body.y = this.input.activePointer.y - spat.displayHeight + 17
-    this.input.activePointer.velocity
+}
 
     spatHead.body.x = spat.body.x + 1;
     spatHead.body.y = spat.body.y;
@@ -170,11 +175,11 @@ function update() {
 }
 
 function createFood(object, food) {
+  if (clicked) {  
     index = Phaser.Math.Between(0, 4)
     newFood = object.physics.add.image(Phaser.Math.Between(0, canvasWidth), -500, keys[index]).setScale(.6)
- 
     food.add(newFood)
-
+}
 }
 
 function deleteFood(deleteZone, food) {
