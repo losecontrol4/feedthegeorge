@@ -19,9 +19,9 @@ var config = {
     width: canvasWidth,
     height: canvasHeight,
   },
-//   audio: {
-//     disableWebAudio: true
-// },
+  input :{
+    activePointers:2,
+  },
   physics: {
     default: "arcade",
     arcade: {
