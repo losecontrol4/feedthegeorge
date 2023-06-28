@@ -210,6 +210,7 @@ var config = {
         debug: false,
       },
     },
+    audio: {noAudio: true},
     scene: {
       preload: preload,
       create: create,
