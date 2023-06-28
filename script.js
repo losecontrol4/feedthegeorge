@@ -24,7 +24,7 @@ function preload() {
   this.load.image("uncrust", "assets/uncrust.png");
   this.load.image("background", "assets/background.png");
   this.load.image("spat", "assets/spat.png")
-  this.load.audio("chomp", ["assets/audio/chomp.mp3"])
+  this.load.audio("chomp", ["assets/audio/chomp.mp3", "assets/audio/chomp.oog"])
   this.load.audio("feedthebirds", ["assets/audio/feedthebirds1.mp3"])
 }
 
@@ -105,18 +105,7 @@ function create() {
         chompArray.push(this.sound.add("chomp", { loop: false, volume: 0.15 }));
     }
 
-
-    music = this.sound.add('feedthebirds', {
-            loop: true
-        })
             
-
-
-    // this.input.on('pointerdown', function (pointer) {
-    //     console.log(pointer.worldX, pointer.worldY)
-       
-    // })
-    
 
     
 }
@@ -127,6 +116,9 @@ function update() {
         
     if (!clicked && this.input.activePointer.isDown) {
         clicked = true
+        let music = this.sound.add('feedthebirds', {
+          loop: true
+      })
         music.play() //possibly stop clicked from being true if music isn't laoded
     }
 
@@ -206,53 +198,3 @@ var config = {
   var game = new Phaser.Game(config);
 
 
-// let total;
-// let blitter;
-// let text;
-// class Example extends Phaser.Scene
-// {
-//     constructor ()
-//     {
-//         super();
-//     }
-
-//     preload ()
-//     {
-        
-//     }
-
-//     create ()
-//     {
-//         total = 250;
-//         blitter = this.add.blitter(0, 0, 'atlas', 'chunk');
-//         text = this.add.text(10, 10, 'Total: 250', { font: '64px Courier', fill: '#00ff00' });
-
-//         for (var i = 0; i < 250; ++i)
-//         {
-//             blitter.create(Phaser.Math.Between(0, 1020), Phaser.Math.Between(0, 764));
-//         }
-//     }
-
-//     update ()
-//     {
-//         if (this.input.activePointer.isDown)
-//         {
-//             for (var i = 0; i < 250; ++i)
-//             {
-//                 blitter.create(Phaser.Math.Between(0, 1020), Phaser.Math.Between(0, 764));
-//             }
-
-//             total += 250;
-
-//             text.setText('Total: ' + total);
-//         }
-//     }
-// }
-
-// const config = {
-//     type: Phaser.WEBGL,
-//     parent: 'phaser-example',
-//     scene: Example
-// };
-
-// const game = new Phaser.Game(config);
