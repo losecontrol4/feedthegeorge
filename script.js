@@ -106,7 +106,7 @@ function create() {
     }
 
 
-    let music = this.sound.add('feedthebirds', {
+    music = this.sound.add('feedthebirds', {
             loop: true
         })
             
